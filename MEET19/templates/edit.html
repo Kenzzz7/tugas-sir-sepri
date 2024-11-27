@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4">Edit Baju</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="nama_baju">Nama Baju</label>
+        <input type="text" class="form-control" id="nama_baju" name="nama_baju" value="{{ baju.nama_baju }}" required>
+    </div>
+    <div class="form-group">
+        <label for="ukuran">Ukuran</label>
+        <input type="text" class="form-control" id="ukuran" name="ukuran" value="{{ baju.ukuran }}" required>
+    </div>
+    <div class="form-group">
+        <label for="warna">Warna</label>
+        <input type="text" class="form-control" id="warna" name="warna" value="{{ baju.warna }}" required>
+    </div>
+    <div class="form-group">
+        <label for="harga">Harga</label>
+        <input type="number" class="form-control" id="harga" name="harga" value="{{ baju.harga }}" required>
+    </div>
+    <button type="submit" class="btn btn-success">Perbarui</button>
+</form>
+{% endblock %}
